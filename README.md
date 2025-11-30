@@ -31,7 +31,7 @@ npm install
 基本语法：
 
 ```
-node proxy.js \<目标URL\> \[本地端口\]
+node proxy.js <目标URL> [本地端口]
 ```
 
 #### **示例 1：基本用法**
