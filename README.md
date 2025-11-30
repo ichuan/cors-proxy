@@ -20,7 +20,9 @@
 
 本项目已包含配置文件 package.json。请在项目根目录下直接运行以下命令以安装所需依赖（包括 http-proxy）：
 
+```
 npm install
+```
 
 ## **使用方法**
 
@@ -28,19 +30,25 @@ npm install
 
 基本语法：
 
+```
 node proxy.js \<目标URL\> \[本地端口\]
+```
 
 #### **示例 1：基本用法**
 
 将本地 8010 端口（默认）的请求转发到 http://api.example.com：
 
-node proxy.js \[http://api.example.com\](http://api.example.com)
+```
+node proxy.js http://api.example.com
+```
 
 #### **示例 2：指定端口**
 
 将本地 9000 端口的请求转发到 https://api.github.com：
 
-node proxy.js \[https://api.github.com\](https://api.github.com) 9000
+```
+node proxy.js https://api.github.com 9000
+```
 
 ### **前端调用示例**
 
@@ -48,12 +56,16 @@ node proxy.js \[https://api.github.com\](https://api.github.com) 9000
 
 **之前 (跨域报错):**
 
-fetch('\[http://api.example.com/users/1\](http://api.example.com/users/1)');
+```
+fetch('http://api.example.com/users/1');
+```
 
 **之后 (通过代理):**
 
+```
 // 请求本地代理地址，路径保持一致  
 fetch('http://localhost:8010/users/1');
+```
 
 ## **注意事项**
 
