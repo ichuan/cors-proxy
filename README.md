@@ -16,38 +16,37 @@
 
 * Node.js (建议 v12.0 或更高版本)
 
-## **安装**
+## **安装与使用**
 
-本项目已包含配置文件 package.json。请在项目根目录下直接运行以下命令以安装所需依赖（包括 http-proxy）：
+无需安装，直接使用 `npx` 运行：
 
-```
-npm install
-```
-
-## **使用方法**
-
-### **命令行启动**
-
-基本语法：
-
-```
-node proxy.js <目标URL> [本地端口]
+```bash
+npx @yc/cors-proxy <目标URL> [本地端口]
 ```
 
-#### **示例 1：基本用法**
+或者全局安装：
+
+```bash
+npm install -g @yc/cors-proxy
+cors-proxy <目标URL> [本地端口]
+```
+
+## **使用示例**
+
+### **示例 1：基本用法**
 
 将本地 8010 端口（默认）的请求转发到 http://api.example.com：
 
-```
-node proxy.js http://api.example.com
+```bash
+npx @yc/cors-proxy http://api.example.com
 ```
 
-#### **示例 2：指定端口**
+### **示例 2：指定端口**
 
 将本地 9000 端口的请求转发到 https://api.github.com：
 
-```
-node proxy.js https://api.github.com 9000
+```bash
+npx @yc/cors-proxy https://api.github.com 9000
 ```
 
 ### **前端调用示例**

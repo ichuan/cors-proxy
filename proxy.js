@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const http = require('http');
 const httpProxy = require('http-proxy');
 
@@ -6,11 +7,11 @@ const targetUrl = process.argv[2];
 const port = process.argv[3] || 8010; // Default to 8010 if not provided
 
 if (!targetUrl) {
-    console.error('Error: Please provide a target URL argument.\nUsage: node proxy.js http://target-site.com [port]');
+    console.error('Error: Please provide a target URL argument.\nUsage: npx @yc/cors-proxy http://target-site.com [port]');
     process.exit(1);
 }
 
-console.log(`[CORS Proxy] Starting...`);
+console.log(`[@yc/cors-proxy] Starting...`);
 console.log(`[Target]  ${targetUrl}`);
 console.log(`[Local]   http://localhost:${port}`);
 
