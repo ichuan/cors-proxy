@@ -21,13 +21,13 @@
 无需安装，直接使用 `npx` 运行：
 
 ```bash
-npx @yc/cors-proxy <目标URL> [本地端口]
+npx @ichuan/cors-proxy <目标URL> [本地端口]
 ```
 
 或者全局安装：
 
 ```bash
-npm install -g @yc/cors-proxy
+npm install -g @ichuan/cors-proxy
 cors-proxy <目标URL> [本地端口]
 ```
 
@@ -38,7 +38,7 @@ cors-proxy <目标URL> [本地端口]
 将本地 8010 端口（默认）的请求转发到 http://api.example.com：
 
 ```bash
-npx @yc/cors-proxy http://api.example.com
+npx @ichuan/cors-proxy http://api.example.com
 ```
 
 ### **示例 2：指定端口**
@@ -46,7 +46,7 @@ npx @yc/cors-proxy http://api.example.com
 将本地 9000 端口的请求转发到 https://api.github.com：
 
 ```bash
-npx @yc/cors-proxy https://api.github.com 9000
+npx @ichuan/cors-proxy https://api.github.com 9000
 ```
 
 ### **前端调用示例**
